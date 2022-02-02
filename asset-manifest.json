@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/baalspots-test/static/css/main.ee8b18ee.css",
+    "main.js": "/baalspots-test/static/js/main.19ff1caf.js",
+    "static/media/background.png": "/baalspots-test/static/media/background.a66c8cbd6c5f02205b84.png",
+    "static/media/PlusJakartaSans-Regular.woff": "/baalspots-test/static/media/PlusJakartaSans-Regular.fa88ca4d0db56c9b0a71.woff",
+    "static/media/cormorant-garamond-v14-latin-regular.woff": "/baalspots-test/static/media/cormorant-garamond-v14-latin-regular.9bb9bce4287c52a142d4.woff",
+    "static/media/cardo_card.png": "/baalspots-test/static/media/cardo_card.07618389b800391711bf.png",
+    "static/media/Helvetica Neue Regular.woff": "/baalspots-test/static/media/Helvetica Neue Regular.46aebe09d5a1976b4c70.woff",
+    "static/media/open-sans-v27-latin-regular.woff": "/baalspots-test/static/media/open-sans-v27-latin-regular.6f6541140f45c8410bb8.woff",
+    "static/media/logo.svg": "/baalspots-test/static/media/logo.3c6f92b40557ed95a037cc06b6aa7069.svg",
+    "static/media/stars.svg": "/baalspots-test/static/media/stars.1a1b0ab49c90111eb64c8e75331dbba2.svg",
+    "static/media/hamburger.svg": "/baalspots-test/static/media/hamburger.058e262c661f5dbd73325de6ee11a944.svg",
+    "static/media/arrow.svg": "/baalspots-test/static/media/arrow.d08b1a8d6c4104bda9e5adcb27e6dde3.svg",
+    "static/media/icon.svg": "/baalspots-test/static/media/icon.90cc80e4861038bf66d4d4b579ba316e.svg",
+    "index.html": "/baalspots-test/index.html",
+    "static/media/circle.svg": "/baalspots-test/static/media/circle.f21a571b9963eaffd33755f556f8d01c.svg",
+    "static/media/arrow-icon.svg": "/baalspots-test/static/media/arrow-icon.c46ba24610526cd1adcb4ac72177068c.svg",
+    "main.ee8b18ee.css.map": "/baalspots-test/static/css/main.ee8b18ee.css.map",
+    "main.19ff1caf.js.map": "/baalspots-test/static/js/main.19ff1caf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ee8b18ee.css",
+    "static/js/main.19ff1caf.js"
+  ]
+}
