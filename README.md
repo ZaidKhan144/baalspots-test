@@ -16,4 +16,4 @@ $ npm install
 $ npm start
 ```
 
-You can view the live version here: https://zaidkhan144.github.io/baalspots-test
+You could also view the live version here: https://zaidkhan144.github.io/baalspots-test
