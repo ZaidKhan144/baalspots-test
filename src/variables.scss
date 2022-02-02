@@ -1,0 +1,31 @@
+$white: #FFFFFF;
+$black: #1D1D1C;
+$primary-btn: #11253E;
+$secondary-btn: #0A2540;
+$link: #A5AFD4;
+$card: #181818;
+
+
+@font-face {
+    font-family: Plus Jakarta Sans;
+    src: url("./assests/fonts/PlusJakartaSans-Regular.woff") format('woff');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Cormorant Garamond;
+    src: url("./assests/fonts/cormorant-garamond-v14-latin-regular.woff") format('woff');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Helvetica Neue;
+    src: url("./assests/fonts/Helvetica\ Neue\ Regular.woff") format('woff');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Open Sans;
+    src: url("./assests/fonts/open-sans-v27-latin-regular.woff") format('woff');
+    font-weight: normal;
+}

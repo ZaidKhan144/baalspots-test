@@ -1,7 +1,12 @@
-import React from "react";
-import "./App.css";
+import React, { useState, useEffect } from "react";
 import { getLCP, getFID, getCLS } from "web-vitals";
 import { GridWrap, GridRow, GridColumn } from "emotion-flex-grid";
+
+import "./App.scss";
+
+import Header from "./layout/Header";
+import Section1 from "./layout/Section1";
+import Section2 from "./layout/Section2";
 
 if (typeof window !== "undefined") {
   getCLS(console.log);
@@ -12,10 +17,14 @@ if (typeof window !== "undefined") {
   Axe(React, 1000);
 }
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <h1>ss</h1>
+      <Header />
+      <main role="main">
+        <Section1 />
+        <Section2 />
+      </main>
     </div>
   );
 }

@@ -1,0 +1,29 @@
+@import '../../variables.scss';
+
+header {
+    width: 45%;
+    padding: 33.5px 0 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-self: center;
+    position: absolute;
+    left: 152px;
+
+
+    div {
+        display: flex;
+        align-items: center;
+        width: 454px;
+        justify-content: space-between;
+
+        a {
+            cursor: pointer;
+            font-family: Plus Jakarta Sans;
+            color: $black;
+            font-size: 1vw;
+            line-height: 5vw;
+            font-weight: bold;
+        }
+    }
+}
