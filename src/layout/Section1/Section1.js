@@ -55,7 +55,6 @@ const Section1 = () => {
           </div>
         </div>
         <div className='right'>
-        
           <img src={background} alt="background" />
         </div>
       </section>
