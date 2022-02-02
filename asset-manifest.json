@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/baalspots-test/static/css/main.ee8b18ee.css",
-    "main.js": "/baalspots-test/static/js/main.19ff1caf.js",
+    "main.js": "/baalspots-test/static/js/main.83fff23b.js",
     "static/media/background.png": "/baalspots-test/static/media/background.a66c8cbd6c5f02205b84.png",
     "static/media/PlusJakartaSans-Regular.woff": "/baalspots-test/static/media/PlusJakartaSans-Regular.fa88ca4d0db56c9b0a71.woff",
     "static/media/cormorant-garamond-v14-latin-regular.woff": "/baalspots-test/static/media/cormorant-garamond-v14-latin-regular.9bb9bce4287c52a142d4.woff",
@@ -17,10 +17,10 @@
     "static/media/circle.svg": "/baalspots-test/static/media/circle.f21a571b9963eaffd33755f556f8d01c.svg",
     "static/media/arrow-icon.svg": "/baalspots-test/static/media/arrow-icon.c46ba24610526cd1adcb4ac72177068c.svg",
     "main.ee8b18ee.css.map": "/baalspots-test/static/css/main.ee8b18ee.css.map",
-    "main.19ff1caf.js.map": "/baalspots-test/static/js/main.19ff1caf.js.map"
+    "main.83fff23b.js.map": "/baalspots-test/static/js/main.83fff23b.js.map"
   },
   "entrypoints": [
     "static/css/main.ee8b18ee.css",
-    "static/js/main.19ff1caf.js"
+    "static/js/main.83fff23b.js"
   ]
 }
