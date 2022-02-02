@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import gsap from 'gsap'
 
-import background from '../../assests/images/background.png';
-import stars from '../../assests/images/stars.svg';
-import arrow from '../../assests/images/arrow.svg';
-import arrowIcon from '../../assests/images/arrow-icon.svg';
-import cardoCard from '../../assests/images/cardo_card.png';
+import background from '../../assets/images/background.png';
+import stars from '../../assets/images/stars.svg';
+import arrow from '../../assets/images/arrow.svg';
+import arrowIcon from '../../assets/images/arrow-icon.svg';
+import cardoCard from '../../assets/images/cardo_card.png';
 
 import './Section1.scss'
 
@@ -24,6 +25,36 @@ const activeBarData = [
 ]
 
 const Section1 = (props) => {
+
+useEffect(() => {
+  backgroundImageAnimation()
+}, []);
+
+const backgroundImageAnimation = () => {
+  gsap.from('.background', {
+    width: '0%',
+    duration: 0.5,
+    right: '-100px',
+    opacity: 0.5,
+    ease: 'power.out',
+    clearProps: "all",
+    onComplete: () => {
+      leftAnimation()
+    }
+  })
+}
+
+const leftAnimation = () => {
+  gsap.from('.left-content', {
+    width: '0%',
+    duration: 0.5,
+    left: '-300px',
+    delay: 0.5,
+    ease: 'power.out',
+    autoAlpha: 0,
+  })
+ }
+
 
   let activeBar = activeBarData.map((item, index) => {
     return (

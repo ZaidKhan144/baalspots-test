@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { GridWrap, GridRow, GridColumn } from "emotion-flex-grid";
+import { GridRow, GridColumn } from "emotion-flex-grid";
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import './Section2.scss'
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Section2 = () => {
 
@@ -19,27 +23,42 @@ const Section2 = () => {
 
   useEffect(() => {
     fetchData()
+    headingAnimation()
   }, []);
+
+  const headingAnimation = () => {
+    gsap.fromTo('.section-container > h1', {
+      y: '-200px',
+      opacity: 0.2,
+
+    }, {
+      y: '0px',
+      scrollTrigger: '.section-container > h1',
+      duration: 1,
+      delay: 2,
+      opacity: 1,
+      onComplete: () => {
+        cardsAnimation()
+      }
+    })
+  }
+
+  const cardsAnimation = () => {
+    gsap.fromTo('.card', {
+      y: '-100px',
+    }, {
+      y: '0px',
+      scrollTrigger: '.card',
+      duration: 1,
+      autoAlpha: 1,
+    })
+  }
 
   
   return (
       <section id='two'>
         <div className='section-container'>
           <h1>Experience The Cardo</h1>
-        {/* <div className='card-container'>
-          {
-          data.length > 0 && data.slice(0, 6).map((item, index) => {
-            return (
-              <div key={index} className='card'>
-                <h5>{item.title}</h5>
-                <p>{item.description}</p>
-                <a href="https://baalspots.com/" target='_blank'>Learn More</a>
-              </div>
-            )
-            })
-          }
-        </div> */}
-
           <GridRow wrap='wrap' justify='between' className='card-container'>
             {
             data.length > 0 && data.slice(0, 6).map((item, index) => {

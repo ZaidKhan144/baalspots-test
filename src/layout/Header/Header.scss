@@ -9,6 +9,7 @@ header {
     align-self: center;
     position: absolute;
     left: 152px;
+    opacity: 1;
 
     @media (max-width: 1025px) {
         position: absolute;
@@ -19,11 +20,6 @@ header {
             width: 30%;
             margin-right: 20px;
         }
-
-        .hamburger-menu {
-            // position: absolute;
-            // right: 35px;s
-        }
     }
 
     div {
@@ -31,10 +27,6 @@ header {
         align-items: center;
         width: 454px;
         justify-content: space-between;
-
-        // @media (max-width: 1025px) {
-        //     display: none;
-        // }
 
         a {
             cursor: pointer;
@@ -45,16 +37,4 @@ header {
             font-weight: bold;
         }
     }
-
-    
 }
-
-
-    .logo {
-        
-        // @media (max-width: 1025px) {
-        //     position: absolute;
-        //     left: 0px;
-        // }
-
-    }

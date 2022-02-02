@@ -1,13 +1,28 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import gsap from 'gsap'
 
-import logo from '../../assests/images/logo.svg';
-import hamburgerMenu from '../../assests/images/hamburger.svg'
+import logo from '../../assets/images/logo.svg';
+import hamburgerMenu from '../../assets/images/hamburger.svg'
 
 import './Header.scss'
 
 const Header = (props) => {
 
-  console.log('ddddddddddddd', props.mobileWidth)
+  useEffect(() => {
+    headerAnimation()
+  }, []);
+  
+
+  const headerAnimation = () => {
+    gsap.from('header', {
+        width: '0%',
+        duration: 0.8,
+        delay: 0.5,
+        y: '-100px',
+        opacity: 0.5,
+    })
+  }
+
   return (
       <header role="banner">
         <img className='logo' src={logo} alt='logo' />

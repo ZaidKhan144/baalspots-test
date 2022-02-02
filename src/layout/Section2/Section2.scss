@@ -2,29 +2,16 @@
 
 section#two {
     background-color: $black;
-    // width: 80%;
-    // height: 853px;
-    // display: inline-block;
-    // color: white;
     padding: 100px 112px;
     
 
     @media (max-width: 1025px) {
-        // width: calc(100% - 20px - 20px);
-        // width: 100%;
         padding: 80px 30px;
-        // padding: 0;
     }
     
     .section-container {
         max-width: 1595px;
         margin: 0 auto;
-
-        @media (max-width: 1025px) {
-            // max-width: 100%;
-            // width: calc(100% + 30px + 30px);
-            // margin: 0;
-        }
     }
 
     & h1 {
@@ -49,19 +36,15 @@ section#two {
 
     .card {
         background-color: $card;
-        // background-color: yellow;
         padding: 36px;
         width: 383px;
         height: 251px;
-        // display: block;
+        visibility: hidden;
 
         @media (max-width: 1025px) {
-            // width: 350px;
-            // height: 230px;
             width: 80vw;
             height: 65vw;
         }
-        
 
         & h5 {
             font-family: Cormorant Garamond;

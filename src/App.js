@@ -6,6 +6,7 @@ import "./App.scss";
 import Header from "./layout/Header";
 import Section1 from "./layout/Section1";
 import Section2 from "./layout/Section2";
+import Loading from "./layout/Loading";
 
 if (typeof window !== "undefined") {
   getCLS(console.log);
@@ -17,6 +18,7 @@ if (typeof window !== "undefined") {
 }
 
 const App = () => {
+  const [loading, setLoading] = useState(true);
   const [ mobileWidth, setMobileWidth ] = useState(window.innerWidth < 1025)
 
   const updateDimensions = () => {
@@ -34,18 +36,23 @@ const App = () => {
       window.removeEventListener('resize', updateDimensions)
     }
   }, [])
+  
 
-  // console.log('eeee', mobileWidth)
-
-  return (
-    <div className="App">
-      <Header mobileWidth={mobileWidth} />
-      <main role="main">
-        <Section1 mobileWidth={mobileWidth} />
-        <Section2 mobileWidth={mobileWidth} />
-      </main>
-    </div>
-  );
+  if (loading) {
+    return (
+      <Loading setLoading={setLoading}/>
+    )
+  } else {
+    return (
+      <div className="App">
+        <Header mobileWidth={mobileWidth} />
+        <main role="main">
+          <Section1 mobileWidth={mobileWidth} />
+          <Section2 mobileWidth={mobileWidth} />
+        </main>
+      </div>
+    );
+  }
 }
 
 export default App;

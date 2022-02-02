@@ -4,17 +4,14 @@ section#one {
 
     display: flex;
     align-items: center;
-    // width: 100%;
     height: 918px;
     position: relative;
 
     @media (max-width: 1025px) {
         flex-direction: column;
-        // width: 100%;
         justify-content: space-between;
         height: 335vw;
         margin-bottom: 50px;
-        // height: 1400px;
     }
 
     .ellipse1 {
@@ -48,24 +45,16 @@ section#one {
         }
     }
 
-    .left {
-        // width: 60%;
-        // background-color: cornflowerblue;
-        // z-index: 2;
-        // position: relative;
-        // height: 100vh;
-    }
-
     .left-content {
         position: absolute;
         width: 40vw;
         height: 456px;
         left: 152px;
         top: 191px;
-        // background-color: cornflowerblue;
+        opacity: 1;
+        visibility: hidden;
 
         @media (max-width: 1025px) {
-            // width: 100%;
             width: 100vw;
             left: 30px;
         }
@@ -105,10 +94,6 @@ section#one {
         .cta {
             display: flex;
             align-items: center;
-
-            // @media (max-width: 1025px) {
-            //     width: 80%;
-            // }
 
             & button {
                 font-family: Helvetica Neue;
@@ -154,8 +139,6 @@ section#one {
 
                 @media (max-width: 1025px) {
                     height: 50px;
-                    // margin-right: 40px;
-                    // padding-right: 20px;
                     margin-right: 10vw;
                     padding-right: 5vw;
                     height: 13vw;
@@ -168,7 +151,6 @@ section#one {
                     font-weight: normal;
 
                     @media (max-width: 1025px) {
-                        // font-size: 12px;
                         font-size: 3.5vw;
                     }
                 }
@@ -180,7 +162,6 @@ section#one {
                     padding-top: 10px;
 
                     @media (max-width: 1025px) {
-                        // font-size: 18px;
                         font-size: 4vw;
                     }
                 }
@@ -190,35 +171,19 @@ section#one {
             }
         }
     }
-
  
     .right {
-        // position: absolute;
-        // right: 0px;
-        // top: 0px;
-        // width: calc(100% - 6.25vw - 6.25vw);
-
-        // // width: 40%;
-        // // height: 50vw;
-        // height: 50%;
-        
         width: 100%;
-        // height: 918px;
-        // left: 804px;
-        // top: 0px;
-        // height: 100%;
-        // right: 0px;
         padding: 0px 20px;
         z-index: 5;
 
         & .background {
             width: 40vw;
             height: 918px;
-            // width: 636px;
             top: 0px;
             position: absolute;
-            // left: 804px;
             right: 0px;
+            opacity: 1;
 
             @media (max-width: 1025px) {
                 display: none;
