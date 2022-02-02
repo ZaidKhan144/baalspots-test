@@ -4,6 +4,7 @@ import background from '../../assests/images/background.png';
 import stars from '../../assests/images/stars.svg';
 import arrow from '../../assests/images/arrow.svg';
 import arrowIcon from '../../assests/images/arrow-icon.svg';
+import cardoCard from '../../assests/images/cardo_card.png';
 
 import './Section1.scss'
 
@@ -22,7 +23,7 @@ const activeBarData = [
   }
 ]
 
-const Section1 = () => {
+const Section1 = (props) => {
 
   let activeBar = activeBarData.map((item, index) => {
     return (
@@ -55,7 +56,8 @@ const Section1 = () => {
           </div>
         </div>
         <div className='right'>
-          <img src={background} alt="background" />
+        { props.mobileWidth ? <img src={cardoCard} alt="cardoCard" className='cardo-card' /> : 
+        <img src={background} alt="background" className='background' /> }
         </div>
       </section>
   );
