@@ -35,7 +35,7 @@ const Section2 = () => {
       y: '0px',
       scrollTrigger: '.section-container > h1',
       duration: 1,
-      delay: 2,
+      delay: 1,
       opacity: 1,
       onComplete: () => {
         cardsAnimation()
