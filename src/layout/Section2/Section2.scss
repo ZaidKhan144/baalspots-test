@@ -39,11 +39,12 @@ section#two {
         padding: 36px;
         width: 383px;
         height: 251px;
-        visibility: hidden;
+        opacity: 0;
 
         @media (max-width: 1025px) {
             width: 80vw;
             height: 65vw;
+            opacity: 1;
         }
 
         & h5 {

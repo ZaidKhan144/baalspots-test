@@ -9,19 +9,18 @@ import './Header.scss'
 const Header = (props) => {
 
   useEffect(() => {
-    headerAnimation()
-  }, []);
-  
+    let tl = gsap.timeline({ defaults: { ease: "power4.inOut", duration: 2}})
 
-  const headerAnimation = () => {
-    gsap.from('header', {
-        width: '0%',
-        duration: 0.8,
-        delay: 0.5,
-        y: '-100px',
-        opacity: 0.5,
-    })
-  }
+    if (!props.mobileWidth) {
+      tl.to('header', { 'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', opacity: 1, y: 0, duration: 2.5, delay: 1})
+    } else {
+      gsap.set('header', {
+        width: '80%',
+        clearProps: "all"
+      })
+    }
+  }, [props.mobileWidth]);
+  
 
   return (
       <header role="banner">

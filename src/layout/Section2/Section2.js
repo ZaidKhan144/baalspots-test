@@ -7,7 +7,7 @@ import './Section2.scss'
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Section2 = () => {
+const Section2 = (props) => {
 
   const [ data, setData ] = useState([])
 
@@ -23,38 +23,51 @@ const Section2 = () => {
 
   useEffect(() => {
     fetchData()
-    headingAnimation()
-  }, []);
+    
+    if(!props.mobileWidth) {
+      gsap.fromTo('.section-container > h1', {
+        y: '-200px',
+        opacity: 0.2,
+  
+      }, {
+        y: '0px',
+        scrollTrigger: '.section-container > h1',
+        duration: 1,
+        delay: 1,
+        opacity: 1,
+        onComplete: () => {
+          cardsAnimation()
+        }
+      })
 
-  const headingAnimation = () => {
-    gsap.fromTo('.section-container > h1', {
-      y: '-200px',
-      opacity: 0.2,
+    } else {
+      gsap.set('.section-container > h1', {
+        clearProps: "all",
+      })
+    }
+    
+  }, [props.mobileWidth]);
 
-    }, {
-      y: '0px',
-      scrollTrigger: '.section-container > h1',
-      duration: 1,
-      delay: 1,
-      opacity: 1,
-      onComplete: () => {
-        cardsAnimation()
-      }
-    })
-  }
 
   const cardsAnimation = () => {
-    gsap.fromTo('.card', {
-      y: '-100px',
-    }, {
-      y: '0px',
-      scrollTrigger: '.card',
-      duration: 1,
-      autoAlpha: 1,
-    })
+
+    if(!props.mobileWidth) {
+      gsap.fromTo('.card', {
+        y: '-100px',
+      }, {
+        y: '0px',
+        duration: 1,
+        delay: 1,
+        opacity: 1,
+      })
+    } else {
+      gsap.set('.card', {
+        clearProps: "all",
+        display: 'block',
+      })
+    }
   }
 
-  
   return (
       <section id='two'>
         <div className='section-container'>

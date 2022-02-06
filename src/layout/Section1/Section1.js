@@ -27,32 +27,43 @@ const activeBarData = [
 const Section1 = (props) => {
 
 useEffect(() => {
-  backgroundImageAnimation()
-}, []);
 
-const backgroundImageAnimation = () => {
-  gsap.from('.background', {
-    width: '0%',
-    duration: 0.5,
-    right: '-100px',
-    opacity: 0.5,
-    ease: 'power.out',
-    clearProps: "all",
-    onComplete: () => {
-      leftAnimation()
-    }
-  })
-}
+  if(!props.mobileWidth) {
+    gsap.from('.background', {
+      width: '0%',
+      duration: 0.5,
+      right: '-100px',
+      opacity: 0.5,
+      ease: 'power.out',
+      onComplete: () => {
+        leftAnimation()
+      }
+    })
+  } else {
+    gsap.set('.cardo-card', {
+      width: '100%',
+      clearProps: "all"
+    })
+  }
+}, [props.mobileWidth]);
+
 
 const leftAnimation = () => {
-  gsap.from('.left-content', {
-    width: '0%',
-    duration: 0.5,
-    left: '-300px',
-    delay: 0.5,
-    ease: 'power.out',
-    autoAlpha: 0,
-  })
+  
+  let tl = gsap.timeline({ defaults: { ease: "power4.inOut", duration: 2}})
+  if (!props.mobileWidth) {
+
+  tl.to('.stars', { 'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', opacity: 1, y: 0, duration: 2.2})
+  tl.to('.heading', { 'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', opacity: 1, y: 0}, "-=2")
+  tl.to('.arrow', { stagger: .1, duration: 1.2, opacity: 1, y: 0}, "-=2")
+  tl.to('.text', { 'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', stagger: .1, duration: 1.2, opacity: 1, y: 0}, "-=2")
+  tl.to('.cta', { 'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', stagger: .1, duration: 1.2, opacity: 1, y: 0}, "-=2")
+  tl.to('.active-bar', { 'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', stagger: .1, duration: 1.2, opacity: 1, y: 0}, "-=2")
+  } else {
+    gsap.set(tl, {
+      clearProps: "all"
+    })
+  } 
  }
 
 
@@ -71,9 +82,9 @@ const leftAnimation = () => {
           <div className='ellipse1'></div>
           <div className='ellipse2'></div>
           <div className='left-content'>
-            <img src={stars} alt='stars' />
-            <h1>All the <span>experience</span> <br /> in the new credit card</h1>
-            <img src={arrow} alt='arrow' />
+            <img className='stars' src={stars} alt='stars' />
+            <h1 className='heading'>All the <span>experience</span> <br /> in the new credit card</h1>
+            <img className='arrow' src={arrow} alt='arrow' />
             <p className='text'>Simple transfers, payments for utilities, functional statemement, 
             card settings, for which you used to have to go too the brach oonline-banking</p>
             <div className='cta'>
@@ -87,7 +98,7 @@ const leftAnimation = () => {
           </div>
         </div>
         <div className='right'>
-        { props.mobileWidth ? <img src={cardoCard} alt="cardoCard" className='cardo-card' /> : 
+        { props.mobileWidth ? <div className='card-div'><img src={cardoCard} alt="cardoCard" className='cardo-card' /></div>  : 
         <img src={background} alt="background" className='background' /> }
         </div>
       </section>

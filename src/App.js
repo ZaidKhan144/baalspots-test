@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { getLCP, getFID, getCLS } from "web-vitals";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import "./App.scss";
 
@@ -24,6 +25,9 @@ const App = () => {
   const updateDimensions = () => {
     let mobileWidth = window.innerWidth < 1025
     setMobileWidth(mobileWidth)
+    if (mobileWidth) {
+      ScrollTrigger.getAll().forEach(ST => {ST.kill({revert: true})})
+    }
   }
 
   useEffect(() => {
