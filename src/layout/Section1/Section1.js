@@ -86,7 +86,7 @@ const leftAnimation = () => {
             <h1 className='heading'>All the <span>experience</span> <br /> in the new credit card</h1>
             <img className='arrow' src={arrow} alt='arrow' />
             <p className='text'>Simple transfers, payments for utilities, functional statement, 
-            card settings, for which you used to have to go to the brach online-banking</p>
+            card settings, for which you used to have to go to the branch online-banking</p>
             <div className='cta'>
               <button>Order a card</button>
               <div>
