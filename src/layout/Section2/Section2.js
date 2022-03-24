@@ -79,7 +79,7 @@ const Section2 = (props) => {
                 <GridColumn key={index} className='card'>
                   <h5>{item.title}</h5>
                   <p>{item.description}</p>
-                  <a href="https://baalspots.com/" target='_blank'>Learn More</a>
+                  <a href="https://www.zaidikhan.com/" target='_blank'>Learn More</a>
                 </GridColumn>
                 )
               })
