@@ -1,3 +1,15 @@
+# Cardo
+
+Simple transfers, payments for utilities, functional statement, card settings, for which you used to have to go to the branch online-banking.
+
+## Homepage
+
+![image](https://i.postimg.cc/RhxcjMkq/Baal-Spots-Test.png)
+
+## Experience The Cardo
+
+![image](https://i.postimg.cc/NFtHddXH/Baal-Spots-Test-1.png)
+
 ## Installation and Setup Instructions
 
 To make below steps work, You will need node and npm installed globally on your machine.
@@ -16,4 +28,13 @@ $ npm install
 $ npm start
 ```
 
-You could also view the live version here: https://zaidkhan144.github.io/baalspots-test
+## Tech used
+- React
+- SASS
+- Mock API
+- Figma
+- GSAP
+- Mobile Responsive
+
+
+
